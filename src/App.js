@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
-
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Routes, //in the new router-dom version, Switch is used
+} from "react-router-dom";
 import "./styles.css";
+import Home from "./home";
+import About from "./about";
+import Kegiatan from "./kegiatan";
 
 function App() {
   // React States
@@ -12,17 +19,17 @@ function App() {
   const database = [
     {
       username: "user1",
-      password: "pass1"
+      password: "pass1",
     },
     {
       username: "user2",
-      password: "pass2"
-    }
+      password: "pass2",
+    },
   ];
 
   const errors = {
     uname: "invalid username",
-    pass: "invalid password"
+    pass: "invalid password",
   };
 
   const handleSubmit = (event) => {
@@ -49,10 +56,7 @@ function App() {
   };
 
   // Generate JSX code for error message
-  const renderErrorMessage = (name) =>
-    name === errorMessages.name && (
-      <div className="error">{errorMessages.message}</div>
-    );
+  const renderErrorMessage = (name) => name === errorMessages.name && <div className="error">{errorMessages.message}</div>;
 
   // JSX code for login form
   const renderForm = (
@@ -78,8 +82,35 @@ function App() {
   return (
     <div className="app">
       <div className="login-form">
-        <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {isSubmitted ? (
+          <div>
+            <>
+              <Router>
+                <div>
+                  <ul className="header">
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/kegiatan">Kegiatan</Link>
+                    </li>
+                    <li>
+                      <Link to="/about">About</Link>
+                    </li>
+                  </ul>
+                  <hr />
+                  <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="/kegiatan" element={<Kegiatan />} />
+                    <Route path="/about" element={<About />} />
+                  </Routes>
+                </div>
+              </Router>
+            </>
+          </div>
+        ) : (
+          renderForm
+        )}
       </div>
     </div>
   );
