@@ -1,3 +1,16 @@
+Tampilan 
+
+- Hal Login
+![image](https://user-images.githubusercontent.com/61998328/170897397-d5be0eeb-6f48-4bdc-af1f-1987f0e953c5.png)
+
+- Home
+![image](https://user-images.githubusercontent.com/61998328/170897426-8c23d5c8-104c-4f9f-bfe9-55126e523a27.png)
+
+- Other Page
+![image](https://user-images.githubusercontent.com/61998328/170897458-b4b853ca-ff8c-402f-8ef9-8dc97dedae06.png)
+![image](https://user-images.githubusercontent.com/61998328/170897479-4a63e224-04b8-4907-81a7-2ad3cbcb21a1.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
