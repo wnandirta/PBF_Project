@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-
+import './App.css';
 import posImage from './Image/posImage.jpeg';
-import './styles.css';
+import './home.css';
 
 class Home extends Component {
     render() {
-        return (
-            <div className='home'>
-                <div className='home__section'>
-                        <img src={posImage}className="App-logo" alt="posImage"/>
-
-                </div>
+        return ( 
+            <div className='home-container'>
+                        <img src={posImage}className="image" width="750" height="500"/>
 
             </div>
         );

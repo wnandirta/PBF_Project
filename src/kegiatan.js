@@ -1,40 +1,47 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route, Routes, useParams, useRouteMatch } from "react-router-dom";
-
-import "./styles.css";
+import './cards.css';
+import poskeg from './Image/poskeg.png';
+import CardItem from './carditem.js';
 
 class Kegiatan extends Component {
   render() {
     return (
-      <div className="kegiatan">
-        <div className="kegiatan__section">
-            <h3>Jenis Kegiatan Yang Dilakukan Di Posyandu</h3>
-          <div>
-            <ul className="header">
-              <li>
-                <Link to="/">KIA</Link>
-              </li>
-              <li>
-                <Link to="/kb">KB</Link>
-              </li>
-              <li>
-                <Link to="/imunisasi">Imunisasi</Link>
-              </li>
-              <li>
-                <Link to="/gizi">Gizi</Link>
-              </li>
-              <li>
-                <Link to="/diare">Diare</Link>
-              </li>
-            </ul>
-            <hr />
-            <Routes>
-              <Route exact path="/" element={<KIA />} />
-              <Route path="/kb" element={<KB />} />
-              <Route path="/imunisasi" element={<Imunisasi />} />
-              <Route path="/gizi" element={<Gizi />} />
-              <Route path="/diare" element={<Diare />} />
-            </Routes>
+      <div className="cards">
+          <h1>Jenis Kegiatan Yang Dilakukan Di Posyandu</h1>
+            <div className='cards__container'>
+              <div className='cards__wrapper'>
+                <ul className='cards__items'></ul>
+                <CardItem
+                  img src={poskeg}className="image" 
+                  text='PROGRAM KESEHATAN IBU DAN ANAK'
+                  label='KIA'
+                  path='/kia'
+                />
+                <CardItem
+                  img src={poskeg}className="image"
+                  text='PROGRAM Keluarga Berencana'
+                  label='KB'
+                  path='/kb'
+                />
+                <CardItem
+                  img src={poskeg}className="image"
+                  text='Daftar Imunisasi'
+                  label='IMUNISASI'
+                  path='/imunisasi'
+                />
+                <CardItem
+                  img src={poskeg}className="image"
+                  text='Presentase Gizi'
+                  label='GIZI'
+                  path='/gizi'
+                />
+                <CardItem
+                  img src={poskeg}className="image"
+                  text='Kesehatan Gigi'
+                  label='GIGI'
+                  path='/gigi'
+                />
           </div>
         </div>
       </div>

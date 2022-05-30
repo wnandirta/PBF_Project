@@ -6,6 +6,7 @@ import {
   Routes, //in the new router-dom version, Switch is used
 } from "react-router-dom";
 import "./styles.css";
+import Navbar from './navbar';
 import Home from "./home";
 import About from "./about";
 import Kegiatan from "./kegiatan";
@@ -86,25 +87,12 @@ function App() {
           <div>
             <>
               <Router>
-                <div>
-                  <ul className="header">
-                    <li>
-                      <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link to="/kegiatan">Kegiatan</Link>
-                    </li>
-                    <li>
-                      <Link to="/about">About</Link>
-                    </li>
-                  </ul>
-                  <hr />
+                <Navbar />
                   <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route path="/kegiatan" element={<Kegiatan />} />
                     <Route path="/about" element={<About />} />
                   </Routes>
-                </div>
               </Router>
             </>
           </div>
