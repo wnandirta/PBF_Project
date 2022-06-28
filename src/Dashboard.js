@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState }  from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import Title from "./Title";
 import AddTodo from "./AddTodo";
 import Todo from "./Todo";
 import "./Dashboard.css";
-import { logout } from "./firebase";
+import { useNavigate } from "react-router-dom";
+import { auth, logout } from "./firebase";
 import {
   collection,
   query,
@@ -39,7 +41,13 @@ function Dashboard() {
   const handleDelete = async (id) => {
     await deleteDoc(doc(db, "todos", id));
   };
-  
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (loading) return;
+    if (!user) return navigate("/");
+    
+  }, [user, loading]);
   return (
     <div className="dashboard">
       <div className="dashboard__container">
@@ -60,9 +68,9 @@ function Dashboard() {
             />
           ))}
         </div>
-        Logged in as
+        
         <button className="dashboard__btn" onClick={logout}>
-          Logout
+          Log Out
         </button>
       </div>
     </div>
