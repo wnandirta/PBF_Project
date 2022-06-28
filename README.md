@@ -1,15 +1,16 @@
 Tampilan 
 
-- Hal Login
-![image](https://user-images.githubusercontent.com/61998328/170897397-d5be0eeb-6f48-4bdc-af1f-1987f0e953c5.png)
+- Login Page
+![WhatsApp Image 2022-06-28 at 09 26 50](https://user-images.githubusercontent.com/61998328/176086309-5702bc89-16df-4eff-8669-3e0ed73821cf.jpeg)
 
-- Home
-![image](https://user-images.githubusercontent.com/61998328/170897426-8c23d5c8-104c-4f9f-bfe9-55126e523a27.png)
+- Register Page
+![WhatsApp Image 2022-06-28 at 09 27 18](https://user-images.githubusercontent.com/61998328/176086423-944ecb70-9fb7-401a-92c5-11744edf77cb.jpeg)
 
-- Other Page
-![image](https://user-images.githubusercontent.com/61998328/170897458-b4b853ca-ff8c-402f-8ef9-8dc97dedae06.png)
-![image](https://user-images.githubusercontent.com/61998328/170897479-4a63e224-04b8-4907-81a7-2ad3cbcb21a1.png)
+- Forget Password Page!
+![WhatsApp Image 2022-06-28 at 09 27 05](https://user-images.githubusercontent.com/61998328/176086515-744436e8-d601-493e-90cc-34468b76c6bd.jpeg)
 
+- Dashboar Page
+![WhatsApp Image 2022-06-28 at 09 27 44](https://user-images.githubusercontent.com/61998328/176086553-3431ca1a-881f-421b-b558-910ffcb30955.jpeg)
 
 # Getting Started with Create React App
 
